@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortis</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/merch.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="header">
+            <div class="left-header"><a href="#home">CORTIS</a></div>
+            <nav class="right-navbar">
+            <ul>
+                <li class="home"><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+                <li class="home"><a href="concert.html"><i class="bi bi-ticket-perforated"></i> Concert</a></li>
+                <li class="home"><a href="merch.html"><i class="bi bi-bag"></i> Merch</a></li>
+                <li class="home"><a href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+                <li class="home"><a href="profile.html"><i class="bi bi-person"></i> Profile</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+ 
+    <main class="merch">
+        <section class="merch-info">
+            <h1>Merch</h1>
+            <p>A fan's guide to CORTIS merch: albums, lightsticks, apparel, and photocards. Prices and stock change often, so check the official shop before you buy.</p>
+ 
+            <input type="radio" name="filter" id="f-all" checked>
+            <input type="radio" name="filter" id="f-albums">
+            <input type="radio" name="filter" id="f-lightstick">
+            <input type="radio" name="filter" id="f-apparel">
+            <input type="radio" name="filter" id="f-photocards">
+ 
+            <div class="chips">
+                <label for="f-all">All</label>
+                <label for="f-albums">Albums</label>
+                <label for="f-lightstick">Lightstick</label>
+                <label for="f-apparel">Apparel</label>
+                <label for="f-photocards">Photocards</label>
+            </div>
+ 
+            <div class="product-grid">
+                <article class="product albums">
+                    <img src="images/album-1.jpg" alt="Cover COLOR OUTSIDE THE LINES">
+                    <div class="product-body">
+                        <span>Albums</span>
+                        <h4>COLOR OUTSIDE THE LINES</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+                <article class="product albums">
+                    <img src="images/album-2.jpg" alt="Cover GREENGREEN">
+                    <div class="product-body">
+                        <span>Albums</span>
+                        <h4>GREENGREEN</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+                <article class="product albums">
+                    <img src="images/greengreen_playextended.png" alt="Cover GREENGREEN">
+                    <div class="product-body">
+                        <span>Albums</span>
+                        <h4>GREENGREEN Playextended</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+                <article class="product lightstick">
+                    <div class="ph"><img src="images/lightstick.jpg" alt=""></div>
+                    <div class="product-body">
+                        <span>Lightstick</span>
+                        <h4>Official lightstick</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+                <article class="product apparel">
+                    <div class="ph">Add photo</div>
+                    <div class="product-body">
+                        <span>Apparel</span>
+                        <h4>Tour T-shirt</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+                <article class="product photocards">
+                    <div class="ph"><img src="images/photocards.jpg" alt=""></div>
+                    <div class="product-body">
+                        <span>Photocards</span>
+                        <h4>Album photocard set</h4>
+                        <a class="shop" href="https://shop.weverse.io" target="_blank" rel="noopener noreferrer">Official shop</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+ 
+        <section class="jastip" id="jastip">
+            <h3>Proxy buying (jastip) guide</h3>
+            <p class="sub">How group orders usually work, so you know what to expect before you pay anyone.</p>
+ 
+            <ol class="steps">
+                <li><strong>1</strong>Pick your item</li>
+                <li><strong>2</strong>Message a proxy buyer</li>
+                <li><strong>3</strong>Confirm fees and pay</li>
+                <li><strong>4</strong>Wait for shipping</li>
+                <li><strong>5</strong>Check the item on arrival</li>
+            </ol>
+ 
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Item</th><th>Bought from</th><th>Fee type</th><th>Typical wait</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Album</td>
+                            <td>Official shop</td>
+                            <td>Service fee</td>
+                            <td>2 to 4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Lightstick</td>
+                            <td>Official shop</td>
+                            <td>Service fee</td>
+                            <td>3 to 5 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Apparel</td>
+                            <td>Official shop</td>
+                            <td>Service and size fee</td>
+                            <td>3 to 6 weeks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">Waiting times are rough estimates. Each proxy buyer sets their own fees.</p>
+ 
+            <div class="jastip-bottom">
+                <div class="safe">
+                    <h4>Stay safe</h4>
+                    <ul>
+                        <li>Ask for proof of past orders</li>
+                        <li>Never share card details or passwords</li>
+                        <li>Be wary of pressure to pay right now</li>
+                    </ul>
+                </div>
+ 
+                <form class="ask" action="#">
+                    <h4>Ask about jastip</h4>
+                    <label for="nama">Name</label>
+                    <input type="text" id="nama" placeholder="Your name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="name@email.com">
+                    <label for="item">Which item?</label>
+                    <input type="text" id="item" placeholder="GREENGREEN album">
+                    <button type="submit">Send question</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Armellia Salsabilla</p>
+        <a href="index.html">Back to Home</a>
+    </footer>
+</body>
+</html>
