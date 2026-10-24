@@ -2,9 +2,9 @@
 
 A fan page dedicated to CORTIS, built with plain HTML and CSS as a mini project for the Front End Basic Study Club (KSM Veterantech UPNVJ 2026).
 
-**Live demo:** [your-vercel-link.vercel.app]
+**Live demo:** [https://cortis-coer-page.vercel.app/]
 
-![Homepage screenshot](screenshots/home.png)
+![Homepage screenshot](images/home.png)
 
 ## About
 This website introduces CORTIS: the members, the discography, merch info, and a short profile of the person who made it. It is a fan-made project and is not affiliated with CORTIS or BIGHIT MUSIC.

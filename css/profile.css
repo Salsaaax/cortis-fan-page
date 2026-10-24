@@ -55,27 +55,32 @@ body {
     padding: var(--space-2) var(--space-4);
 }
 
-.left-header a {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.right-navbar ul {
-  display: flex;
-  gap: var(--space-3);
-  list-style: none;
-}
-
 .home a {
-  color: var(--text-dim);
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dim);
+    text-decoration: none;
 }
 
 .home a:hover,
 .home a:focus-visible { color: var(--green); }
+
+.home a[aria-current="page"] {
+    position: relative;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.home a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--green);
+}
 
 .btn {
   display: inline-block;
@@ -88,7 +93,7 @@ body {
   border-radius: 99px;
 }
 
-.btn:hover { background: var(--text); }
+.btn:hover { background: var(--red); }
 
 .profil {
     width: 85%;
@@ -150,8 +155,7 @@ body {
 .favorit dl div {
     padding: var(--space-2);
     background: var(--surface);
-    border-left: 3px solid var(--green);
-    border-radius: var(--radius);
+    border-radius: 17px;
 }
 
 .favorit dt {
@@ -184,12 +188,10 @@ body {
     padding: var(--space-2);
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: 15px;
     font-size: 14px;
     font-weight: 700;
 }
-
-.minat li:hover { border-color: var(--green); }
 
 .contact ul {
     display: grid;

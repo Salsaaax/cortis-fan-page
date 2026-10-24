@@ -121,15 +121,35 @@ h3 i {
 
 main {
     padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .home a {
-  color: var(--text-dim);
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-dim);
+    text-decoration: none;
 }
 
 .home a:hover,
 .home a:focus-visible { color: var(--green); }
+
+.home a[aria-current="page"] {
+    position: relative;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.home a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--green);
+}
 
 .btn {
   display: inline-block;
@@ -157,11 +177,15 @@ main {
 }
 
 .chips label {
-    background: var(--red);
+    background: var(--line);
     padding: 0.7rem 1.7rem;
     border-radius: 15px;
     align-items: center;
     cursor: pointer;
+}
+
+.chips label:hover {
+    background: var(--green);
 }
 
 .product {
@@ -173,7 +197,7 @@ main {
 }
 
 .product-grid {
-    padding-top: 2.5rem;
+    padding-top: 1.7rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-2);
@@ -199,7 +223,7 @@ main {
 }
 
 .product-body a:hover {
-    background: var(--rose);
+    background: var(--red);
     color: var(--bg);
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
@@ -218,6 +242,96 @@ main {
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
+.jastip {
+    padding-top: 4rem;
+}
+
+.sub { color: var(--text-dim); }
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-1);
+    margin-top: 2rem;
+    list-style: none;
+}
+.steps li {
+    padding: var(--space-2);
+    background: var(--yellow);
+    color: black;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.steps strong {
+    display: block;
+    font-family: "Archivo Black", "Arial Black", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.table-wrap { margin-top: 2rem; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+th { font-size: 13px; color: var(--yellow); }
+td { color: var(--text); }
+tbody tr:hover { background: var(--surface); }
+
+.note { margin-top: var(--space-1); font-size: 13px; color: var(--text-dim); }
+
+.jastip-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-top: 2rem;
+    align-items: start;
+}
+.safe {
+    padding: var(--space-3);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+.safe h4 { margin-bottom: var(--space-2); }
+.safe ul { padding-left: var(--space-3); color: var(--text-dim); }
+.safe li { padding: 4px 0; }
+.safe li::marker { color: var(--green); }
+
+.ask {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-3);
+    background: var(--surface);
+    border-radius: var(--radius);
+}
+.ask h4 { margin-bottom: var(--space-2); }
+.ask label { margin-bottom: 4px; font-size: 13px; color: var(--text-dim); }
+.ask input {
+    margin-bottom: var(--space-2);
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+.ask input:focus { outline: 2px solid var(--green); }
+.ask button {
+    padding: 10px;
+    font: inherit;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--green);
+    border: none;
+    border-radius: 99px;
+    cursor: pointer;
+}
+.ask button:hover { background: var(--text); }
+
 .ph {
     display: grid;
     place-items: center;
@@ -236,6 +350,7 @@ footer {
     font-size: 14px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    margin-top: 3rem;
 }
 
 footer a {
