@@ -111,7 +111,6 @@ body {
     aspect-ratio: 3 / 4;
     overflow: hidden;
     background: var(--surface);
-    border-top: 3px solid var(--yellow);
     border-radius: var(--radius);
 }
 
@@ -134,8 +133,13 @@ body {
     font-weight: 700;
 }
 
+.deskripsi {
+    padding-top: 1rem;
+    padding-left: 0.2rem;
+}
+
 .deskripsi p {
-    max-width: 60ch;
+    max-width: 70ch;
     color: var(--text-dim);
 }
 
