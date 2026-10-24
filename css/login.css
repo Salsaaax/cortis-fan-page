@@ -157,9 +157,9 @@ body {
 }
 
 .forgot {
-    display: block;          /* agar bisa diatur rata kiri/kanan */
+    display: block;       
     margin-top: 0.6rem;
-    text-align: right;        /* ganti "right" kalau mau di kanan seperti referensi */
+    text-align: right;      
     font-size: 14px;
     color: white;
 }

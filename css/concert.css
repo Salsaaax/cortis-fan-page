@@ -45,7 +45,7 @@ h1, h2, h3 {
   line-height: 1.1;
 }
 
-h3 {                          
+h3 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-bottom: var(--space-3);
 }
@@ -53,38 +53,25 @@ h3 {
 img { max-width: 100%; display: block; }
 a { color: var(--green); }
 
-.home a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.btn,
-footer a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
 h3 i {
-    margin-right: 8px;
-    color: var(--green);
+  margin-right: 8px;
+  color: var(--green);
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--bg);
-    border-bottom: 1px solid var(--line);
-    justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  justify-content: center;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-2) var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
 }
 
 .left-header a {
@@ -102,238 +89,273 @@ h3 i {
 }
 
 .home a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--text-dim);
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-dim);
+  text-decoration: none;
 }
 
 .home a:hover,
 .home a:focus-visible { color: var(--green); }
 
 .home a[aria-current="page"] {
-    position: relative;
-    color: var(--green);
-    font-weight: 700;
+  position: relative;
+  color: var(--green);
+  font-weight: 700;
 }
 
 .home a[aria-current="page"]::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -6px;
-    height: 2px;
-    background: var(--green);
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--green);
 }
 
-.btn {
-  display: inline-block;
-  margin-top: var(--space-3);
-  padding: 12px 24px;
+.btn,
+footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover,
+.btn:focus-visible,
+footer a:hover,
+footer a:focus-visible {
   background: var(--green);
   color: var(--bg);
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 99px;
 }
 
-.btn:hover { background: var(--red); }
-
 .hero {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 90%;
-    max-width: 900px;
-    height: 340px;
-    min-height: 0;
-    margin: var(--space-4) auto;
-    overflow: hidden;
-    background: var(--surface);
-    border-radius: 20px;
+  position: relative;
+  display: grid;
+  align-items: end;
+  justify-items: start;
+  min-height: 60vh;
+  overflow: hidden;
+  background: var(--surface);
 }
 
 .hero > img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
 }
 
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 12, 13, 0.95) 0%, rgba(12, 12, 13, 0.3) 70%);
+  z-index: 1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0 var(--space-2);
-    text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: var(--space-4) 3rem;
+  text-align: left;
 }
 
 .hero-content h1 {
-    padding-bottom: var(--space-1);
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+  font-size: clamp(3rem, 9vw, 6rem);
+  padding-bottom: var(--space-1);
 }
 
 .hero-content p {
-    padding-bottom: 0;
+  max-width: 40ch;
+  padding-bottom: var(--space-3);
+  color: var(--text);
 }
 
-.concert .block { padding: 1.5rem; padding-top: 3.5rem; }
-.concert h4 { font-size: 1.05rem; }
-.note { margin-bottom: var(--space-3); max-width: 70ch; color: var(--text-dim); font-size: 14px; }
+.block {
+  max-width: 1000px;
+  padding: 4rem 3rem 0;
+}
 
-.ticket-list { list-style: none; display: grid; gap: var(--space-2); }
+.note {
+  max-width: 60ch;
+  margin-bottom: var(--space-3);
+  font-size: 15px;
+  color: var(--text-dim);
+}
+
+.ticket-list {
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
 .ticket {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-2) var(--space-3);
-    background: var(--surface);
-    border-left: 4px solid var(--green);
-    border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
 }
-.ticket::before,
-.ticket::after {
-    content: "";
-    position: absolute;
-    left: 144px;
-    width: 20px;
-    height: 20px;
-    background: var(--bg);
-    border-radius: 50%;
-}
-.ticket::before { top: -10px; }
-.ticket::after  { bottom: -10px; }
-.ticket-date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 130px;
-    padding-right: var(--space-3);
-    border-right: 2px dashed var(--line);
-}
+
 .ticket-date strong {
-    font-family: "Archivo Black", "Arial Black", sans-serif;
-    font-weight: 400;
-    font-size: 1.9rem;
-    line-height: 1;
-    color: var(--yellow);
+  display: block;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
-.ticket-date span { font-size: 13px; color: var(--text-dim); }
-.ticket-info { flex: 1; padding-left: var(--space-1); }
-.ticket-info p { font-size: 14px; color: var(--text-dim); }
-.ticket:hover { background: #222225; }
-.ticket.special { border-left-color: var(--rose); }
+
+.ticket-date span {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.ticket-info h4 {
+  font-size: 1.05rem;
+}
+
+.ticket-info p {
+  font-size: 15px;
+  color: var(--text-dim);
+}
 
 .status {
-    padding: 4px 14px;
-    border-radius: 99px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--bg);
-    white-space: nowrap;
+  font-size: 14px;
+  color: var(--text-dim);
 }
-.done     { background: var(--text-dim); }
-.birthday { background: var(--rose); }
+
+.status.birthday {
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.ticket.special {
+  border-left: 3px solid var(--rose);
+  padding-left: var(--space-2);
+}
 
 .festival-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3) var(--space-4);
 }
+
 .fest {
-    padding: var(--space-3);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 15px;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
 }
-.fest:hover { border-color: var(--green); }
-.fest .date { font-size: 13px; font-weight: 700; color: var(--yellow); }
-.fest h4 { margin: 4px 0; }
-.fest p { font-size: 14px; color: var(--text-dim); }
 
-/* Timeline */
-.timeline { position: relative; list-style: none; padding-left: var(--space-4); }
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 7px;
-    top: 6px;
-    bottom: 6px;
-    width: 2px;
-    background: var(--line);
+.fest .date {
+  font-size: 14px;
+  color: var(--yellow);
 }
-.timeline li { position: relative; padding-bottom: var(--space-3); }
+
+.fest h4 {
+  font-size: 1.05rem;
+}
+
+.fest p {
+  font-size: 15px;
+  color: var(--text-dim);
+}
+
+.timeline {
+  list-style: none;
+  margin-left: 6px;
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--line);
+}
+
+.timeline li {
+  position: relative;
+  padding-bottom: var(--space-3);
+}
+
+.timeline li:last-child { padding-bottom: 0; }
+
 .timeline li::before {
-    content: "";
-    position: absolute;
-    left: calc(-1 * var(--space-4));
-    top: 6px;
-    width: 16px;
-    height: 16px;
-    background: var(--bg);
-    border: 3px solid var(--green);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-3) - 4px);
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
 }
-.timeline span { font-size: 13px; font-weight: 700; color: var(--yellow); }
-.timeline p { font-size: 14px; color: var(--text-dim); }
 
-/* Video + tips */
+.timeline span {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.timeline h4 {
+  font-size: 1.05rem;
+}
+
+.timeline p {
+  font-size: 15px;
+  color: var(--text-dim);
+}
+
 .highlight {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: var(--space-4);
-    align-items: start;
+  padding-bottom: 4rem;
 }
-.video-frame { aspect-ratio: 16 / 9; overflow: hidden; background: var(--surface); border-radius: var(--radius); }
-.video-frame iframe { width: 100%; height: 100%; border: 0; }
-.faq details {
-    margin-bottom: var(--space-1);
-    padding: var(--space-2);
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-}
-.faq details[open] { border-color: var(--green); }
-.faq summary { cursor: pointer; font-weight: 700; }
-.faq details p { margin-top: var(--space-1); font-size: 14px; color: var(--text-dim); }
 
-/* ---------- Footer ---------- */
+.video-box {
+  max-width: 760px;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-3) 0;
-    border-top: 1px solid var(--line);
-    color: var(--text-dim);
-    font-size: 14px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--text-dim);
+  font-size: 14px;
 }
 
-footer a {
-    background: var(--green);
-    border-radius: 20px;
-    color: black;
-    padding: 0.6rem 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
+@media (max-width: 800px) {
+  .header { padding: var(--space-2); }
+  .right-navbar ul { gap: var(--space-2); flex-wrap: wrap; justify-content: flex-end; }
+
+  .hero-content,
+  .block { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+  .ticket {
+    grid-template-columns: 90px 1fr;
+    gap: var(--space-2);
+  }
+
+  .status { grid-column: 2; }
+
+  .festival-grid { grid-template-columns: 1fr; }
 }

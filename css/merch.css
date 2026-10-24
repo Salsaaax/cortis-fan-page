@@ -282,24 +282,7 @@ th { font-size: 13px; color: var(--yellow); }
 td { color: var(--text); }
 tbody tr:hover { background: var(--surface); }
 
-.note { margin-top: var(--space-1); font-size: 13px; color: var(--text-dim); }
-
-.jastip-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
-    margin-top: 2rem;
-    align-items: start;
-}
-.safe {
-    padding: var(--space-3);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-}
-.safe h4 { margin-bottom: var(--space-2); }
-.safe ul { padding-left: var(--space-3); color: var(--text-dim); }
-.safe li { padding: 4px 0; }
-.safe li::marker { color: var(--green); }
+.note { margin-top: var(--space-1); font-size: 13px; color: var(--text-dim); padding-bottom: 3rem; }
 
 .ask {
     display: flex;
